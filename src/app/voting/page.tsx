@@ -20,7 +20,7 @@ export default function Voting() {
                         <p className="text-[18px] md:text-[32px] text-slate-900/50 font-semibold">make your choice on a trusted voting web</p>
                         <div className=" uppercase mt-8 justify-center flex gap-8">
                             <Button onClick={()=>router.push("/voting/create")} text="Create a vote" className="text-lg md:text-2xl" />
-                            <Button text="follow the vote" className="text-lg  md:text-2xl" />
+                            <Button onClick={()=>router.push("/participant")} text="follow the vote" className="text-lg  md:text-2xl" />
                         </div>
                     </div>
                 </div>

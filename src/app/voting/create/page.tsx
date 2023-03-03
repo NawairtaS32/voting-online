@@ -4,7 +4,7 @@ import { Head } from "next/document";
 import ReactDatePicker, {registerLocale} from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import id from "date-fns/locale/id";
-import React, { useState } from "react";
+import { useState } from "react";
 import Candidate from "components/Candidate";
 import {BsPersonPlus} from  "react-icons/bs";
 import Button from "components/button";
@@ -50,7 +50,7 @@ export default function page() {
     };
 
     return(
-        <div className="mt-[4%] mb-20 mx-auto">
+        <div className="mt-[4%] mb-20 ">
             <div className="">
                 <div className="text-2xl md:text-4xl font-semibold uppercase ">
                     create a new vote
@@ -94,7 +94,7 @@ export default function page() {
                 <div className="grid gap-4 md:gap-10 grid-cols-1 px-10 md:grid-cols-4 mt-5 ">
                     {candidates.map((candidate:Candidate, index:number) => (
                             <Candidate 
-                                key={index} 
+                                key={index}
                                 candidate={candidate} 
                                 submitCandidate={ submitCandidate}
                                 removeCandidateForm={removeCandidateForm}
@@ -105,7 +105,7 @@ export default function page() {
                         <BsPersonPlus  />
                     </div>
                 </div>
-                <div className="text-right mt-10">
+                <div className="mt-10">
                     <Button text="Submit" />
                 </div>
             </form>
